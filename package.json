@@ -1,0 +1,19 @@
+{
+  "name": "jsutils",
+  "version": "0.0.9",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vphpersson/jsutils.git"
+  },
+  "author": "vph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vphpersson/jsutils/issues"
+  },
+  "homepage": "https://github.com/vphpersson/jsutils#readme"
+}
