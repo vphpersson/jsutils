@@ -1,6 +1,6 @@
 export default class Node {
 
-    static id_counter = 0;
+    id_counter = 0;
 
     constructor(value = null) {
         this.value = value;
