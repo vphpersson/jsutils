@@ -76,3 +76,15 @@ export function strip_right(str, chr) {
 
     return str.slice(0, i+1);
 }
+
+/**
+ * Produce a snake cased version of a camel cased string.
+ *
+ * @param {string} camel_case_string - The camel cased string whose value to transform.
+ * @returns {string} - The camel cased string as a snake cased string.
+ */
+function camel_case_to_snake_case(camel_case_string) {
+    return camel_case_string.replace(
+        /(?<=.)((?<=[a-z])[A-Z]|[A-Z](?=[a-z]))/g, match => `_${match.toLowerCase()}`
+    ).toLowerCase();
+}
