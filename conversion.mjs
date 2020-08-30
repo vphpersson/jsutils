@@ -14,3 +14,28 @@ export function buffer_to_hex(buffer) {
     return hex_codes.join('');
 }
 
+/**
+ * Flatten an object.
+ *
+ * @param base_object - The object to flatten.
+ * @return {object} - A flattened version of the input object.
+ */
+export function flatten_object(base_object) {
+    if (!base_object)
+        return {};
+
+    const flattened_object = {};
+
+    function traverse(object, path) {
+        for (const [key, value] of Object.entries(object)) {
+            if (typeof(object[key]) === 'object') {
+                traverse(object[key], `${path}${key}.`);
+            } else {
+                flattened_object[`${path}${key}`] = value
+            }
+        }
+    }
+
+    traverse(base_object, '');
+    return flattened_object;
+}
